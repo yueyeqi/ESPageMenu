@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// 屏宽
+public let ScreenW = UIScreen.main.bounds.size.width
+
 extension UIViewController {
     //动态给VC添加一个index属性
     private struct RuntimeKey {
@@ -23,6 +26,7 @@ extension UIViewController {
 }
 
 class ESPageMenu: UIView {
+    
 //MARK: - 公开属性
     //数据源
     open var viewControllers = [UIViewController]() {
@@ -40,6 +44,11 @@ class ESPageMenu: UIView {
             backgroundColor = bgColor
         }
     }
+    //未选中颜色,默认是灰色
+    open var unSelectColor: UIColor = UIColor.darkGray
+    //选中颜色,默认是蓝色
+    open var selectColor: UIColor = UIColor.blue
+    
 //MARK: - 私有属性
     //回调闭包
     private var clickClusre: ((_ index: Int) -> ())?
@@ -64,7 +73,7 @@ class ESPageMenu: UIView {
             vc.index = idx
             let x = idx * (Int(ScreenW) / viewControllers.count)
             let rect = CGRect(x: CGFloat(x), y: 0, width: ScreenW / CGFloat(viewControllers.count), height: 50)
-            let pageTitleView = ESPageTitleView(frame: rect, title: vc.title)
+            let pageTitleView = ESPageTitleView(frame: rect, title: vc.title, selectColor: selectColor, unSelectColor: unSelectColor)
             pageTitleView.tag = idx
             let ges = UITapGestureRecognizer(target: self, action: #selector(clickAct(tap:)))
             pageTitleView.addGestureRecognizer(ges)
@@ -74,7 +83,7 @@ class ESPageMenu: UIView {
         }
         let lineRect = CGRect(x: 20, y: 48, width: (ScreenW / CGFloat(viewControllers.count)) - 40, height: 2)
         selectLine.frame = lineRect
-        selectLine.backgroundColor = ColorBlue
+        selectLine.backgroundColor = selectColor
         addSubview(selectLine)
         
         let pageRect = CGRect(x: 0, y: 50, width: frame.width, height: frame.height - 50)

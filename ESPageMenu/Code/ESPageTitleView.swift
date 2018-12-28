@@ -10,6 +10,9 @@ import UIKit
 class ESPageTitleView: UIView {
 
     var titleLabel = UILabel()
+    var selectColor = UIColor.blue
+    var unSelectColor = UIColor.darkGray
+    
     open var isSelect = false {
         didSet {
             setSelect(flag: isSelect)
@@ -20,12 +23,15 @@ class ESPageTitleView: UIView {
         super.init(frame: frame)
     }
     
-    init(frame: CGRect, title: String?) {
+    init(frame: CGRect, title: String?, selectColor: UIColor, unSelectColor: UIColor) {
         super.init(frame: frame)
+        self.selectColor = selectColor
+        self.unSelectColor = unSelectColor
         let rect = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         titleLabel.frame = rect
         titleLabel.text = title
-        titleLabel.setLabelColorAndFont(color: UIColor.darkGray, size: 16)
+        titleLabel.textColor = unSelectColor
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
         titleLabel.textAlignment = .center
         addSubview(titleLabel)
     }
@@ -36,9 +42,9 @@ class ESPageTitleView: UIView {
     
     func setSelect(flag: Bool) {
         if flag {
-            titleLabel.textColor = ColorBlue
+            titleLabel.textColor = selectColor
         }else {
-            titleLabel.textColor = UIColor.darkGray
+            titleLabel.textColor = unSelectColor
         }
     }
     

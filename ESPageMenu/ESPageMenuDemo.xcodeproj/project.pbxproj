@@ -12,6 +12,9 @@
 		A9FC693921D5DFA6005250FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FC693721D5DFA6005250FB /* Main.storyboard */; };
 		A9FC693B21D5DFA8005250FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FC693A21D5DFA8005250FB /* Assets.xcassets */; };
 		A9FC693E21D5DFA8005250FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FC693C21D5DFA8005250FB /* LaunchScreen.storyboard */; };
+		A9FC694921D5FFCF005250FB /* ESPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC694621D5FFCF005250FB /* ESPageContentView.swift */; };
+		A9FC694A21D5FFCF005250FB /* ESPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC694721D5FFCF005250FB /* ESPageTitleView.swift */; };
+		A9FC694B21D5FFCF005250FB /* ESPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC694821D5FFCF005250FB /* ESPageMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		A9FC693A21D5DFA8005250FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9FC693D21D5DFA8005250FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9FC693F21D5DFA8005250FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9FC694621D5FFCF005250FB /* ESPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPageContentView.swift; sourceTree = "<group>"; };
+		A9FC694721D5FFCF005250FB /* ESPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPageTitleView.swift; sourceTree = "<group>"; };
+		A9FC694821D5FFCF005250FB /* ESPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPageMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		A9FC693221D5DFA6005250FB /* ESPageMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A9FC694521D5FFCF005250FB /* Code */,
 				A9FC693321D5DFA6005250FB /* AppDelegate.swift */,
 				A9FC693521D5DFA6005250FB /* ViewController.swift */,
 				A9FC693721D5DFA6005250FB /* Main.storyboard */,
@@ -63,6 +70,16 @@
 			);
 			path = ESPageMenuDemo;
 			sourceTree = "<group>";
+		};
+		A9FC694521D5FFCF005250FB /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				A9FC694621D5FFCF005250FB /* ESPageContentView.swift */,
+				A9FC694721D5FFCF005250FB /* ESPageTitleView.swift */,
+				A9FC694821D5FFCF005250FB /* ESPageMenu.swift */,
+			);
+			path = Code;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -136,6 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FC693621D5DFA6005250FB /* ViewController.swift in Sources */,
+				A9FC694921D5FFCF005250FB /* ESPageContentView.swift in Sources */,
+				A9FC694B21D5FFCF005250FB /* ESPageMenu.swift in Sources */,
+				A9FC694A21D5FFCF005250FB /* ESPageTitleView.swift in Sources */,
 				A9FC693421D5DFA6005250FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
